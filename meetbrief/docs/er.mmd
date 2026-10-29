@@ -1,0 +1,44 @@
+erDiagram
+  USERS ||--o{ SESSIONS : owns
+  USERS ||--o{ MEETINGS : creates
+  USERS ||--o{ MEETINGS : approves
+  MEETINGS ||--o{ HISTORY : versions
+  USERS ||--o{ HISTORY : authors
+  USERS {
+    int id PK
+    text username UK
+    text password_hash
+    text role
+    text created_at
+    boolean active
+  }
+  SESSIONS {
+    text token_hash PK
+    int user_id FK
+    text csrf_token
+    text expires_at
+    text created_at
+  }
+  MEETINGS {
+    text id PK
+    text title
+    text meeting_date
+    text notes
+    text original_text
+    text cleaned_lines_json
+    text analysis_json
+    text status
+    int created_by FK
+    int approved_by FK
+    text approved_at
+    text created_at
+    text updated_at
+  }
+  HISTORY {
+    int id PK
+    text meeting_id FK
+    int actor_id FK
+    text action
+    text snapshot_json
+    text created_at
+  }

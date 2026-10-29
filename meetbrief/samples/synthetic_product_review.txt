@@ -1,0 +1,13 @@
+Topic: Release readiness
+[00:00:18] Morgan: The staging checklist is complete, and the accessibility review found two contrast issues.
+[00:01:05] Unknown speaker: We agreed to keep the release date as October 31, provided those contrast fixes pass review.
+[00:02:12] Morgan: Action: Owner: Priya Shah. Fix the two contrast issues by October 29, 2026.
+
+Topic: Support coverage
+[00:04:02] Lee: We may consider a weekend support rotation, but no schedule has been approved.
+[00:05:21] Morgan: The support team will publish the weekday escalation contacts.
+[00:06:03] Lee: Owner: Lee Chen. Please publish the contact sheet by 10/30/2026.
+
+Topic: Open items
+[00:08:42] Unknown speaker: Do we have confirmation from the payment provider about the test credentials?
+[00:09:10] Morgan: No, we still need to confirm that before the staging sign-off.

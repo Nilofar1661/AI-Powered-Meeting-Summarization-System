@@ -1,0 +1,15 @@
+1
+00:00:01,200 --> 00:00:05,000
+Riley: Yesterday the cache fix passed the staging check.
+
+2
+00:00:06,100 --> 00:00:10,000
+Unknown speaker: We decided to ship the fix with the next maintenance release.
+
+3
+00:00:11,000 --> 00:00:15,300
+Riley: Action item: owner: Riley Chen, due 2026-10-30. Update the release notes.
+
+4
+00:00:16,100 --> 00:00:19,200
+Unknown speaker: Is the mobile build included in that release?

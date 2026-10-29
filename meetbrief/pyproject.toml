@@ -1,0 +1,11 @@
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.pyright]
+include = ["app", "streamlit_app.py", "db_setup.py"]
+extraPaths = ["."]
+pythonVersion = "3.11"
+typeCheckingMode = "basic"
+reportMissingImports = "none"

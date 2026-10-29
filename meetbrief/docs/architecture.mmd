@@ -1,0 +1,16 @@
+flowchart LR
+  Browser[Responsive dashboard] -->|same-origin JSON/FormData| API[FastAPI routes]
+  Streamlit[Optional Streamlit UI] --> Service[Shared Python workflows]
+  API --> Auth[Auth / role / CSRF checks]
+  API --> Parse[TXT DOCX SRT parser]
+  Parse --> Clean[Normalized lines + preserved original]
+  Clean --> Analyze[Extractive analysis + evidence checks]
+  Analyze -->|default; no key required| Offline[Local sentence selection]
+  Analyze -->|per-transcript explicit consent| LLM[Configured OpenAI-compatible LLM]
+  API --> Service
+  Service --> SQLite[(SQLite database)]
+  SQLite --> Meetings[Meetings / transcripts / analysis]
+  SQLite --> Users[Users / password hashes / sessions]
+  SQLite --> Audit[Immutable-style version and action history]
+  Service --> Review[Edit / evidence / approve / Admin reopen]
+  Review --> Exports[Approved MD / TXT / JSON / actions CSV]
